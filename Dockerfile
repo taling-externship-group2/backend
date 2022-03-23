@@ -30,7 +30,7 @@ RUN npm install && npm run production
 FROM php:8.1.3-apache-buster
 COPY . /var/www/html
 RUN cp /var/www/html/000-default.conf /etc/apache2/sites-enabled/000-default.conf
-RUN cp /var/www/html/.env /var/www/html/.env
+RUN cp /var/www/html/.env.production /var/www/html/.env
 
 RUN chown -R www-data:www-data /var/www/html/bootstrap/cache
 RUN chown -R www-data:www-data /var/www/html/storage
