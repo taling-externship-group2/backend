@@ -18,9 +18,19 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
+        'id',
         'password',
+        'profile_img',
+        'name',
+        'phone',
+        'email',
+        'tutor_auth',
+        'tutor_info',
+        'tutor_insta',
+        'tutor_blog',
+        'tutor_youtube',
+        'created_at',
+        'updated_at'
     ];
 
     /**
@@ -41,4 +51,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function contents() {
+        return $this->hasMany('App\Models\Content', 'user_id', 'id');
+    }
+    public function wishes() {
+        return $this->hasMany('App\Models\Wish', 'user_id', 'id');
+    }
 }
