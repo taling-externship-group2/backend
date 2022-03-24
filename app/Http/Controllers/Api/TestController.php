@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\API;
+namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Content;
@@ -9,13 +9,16 @@ class TestController extends Controller
 {
     public function getBestContents()
     {
-        $response = Content::select('id', 'title');
+        $response = Content::select('id', 'image', 'price', 'discount', 'duration', 'cate_sub', 'title')
+            ->whereRaw('id > 10')
+            ->get();
 
         return response()->json($response);
     }
     public function getRecommendContents()
     {
-        $response = Content::all();
+        $response = Content::select('id', 'image', 'price', 'discount', 'duration', 'cate_sub', 'title')
+            ->whereRaw('id <= 10')->get();
 
         return response()->json($response);
     }
@@ -24,7 +27,6 @@ class TestController extends Controller
         $response = Content::find($id);
 
         return response()->json($response);
-
     }
 
 

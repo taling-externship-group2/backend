@@ -14,15 +14,22 @@ class CreateContentsTable extends Migration
     public function up()
     {
         Schema::create('contents', function (Blueprint $table) {
+            // home에 뿌려줄 내용
             $table->id();
+            $table->string('image')->nullalbe();;
             $table->foreignId('user_id')->constrained('users');
-            $table->string('title')->nullalbe();
+            $table->string('title');
+            $table->integer('price');
+            $table->integer('discount')->nullalbe();
+            $table->string('cate_sub')->nullalbe();
+            $table->integer('duration')->nullalbe();
+
+            // 
             $table->text('contents_sum')->nullalbe();
             $table->text('target')->nullalbe();
             $table->text('contents_detail')->nullalbe();
             $table->text('crclm')->nullalbe();
             $table->string('cate_main')->nullalbe();
-            $table->string('cate_sub')->nullalbe();
             // $table->string('class_type')->nullalbe();
             // $table->string('t_type')->nullalbe();
             // $table->unsignedInteger('run_time')->nullalbe();
