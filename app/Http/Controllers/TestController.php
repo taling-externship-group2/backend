@@ -11,8 +11,8 @@ class TestController extends Controller
     //
 
     public function index()
-    { 
+    {
         $user = User::find(0);
-        $asd = $user->contents;
+        $asd = $user;
     }
 }
