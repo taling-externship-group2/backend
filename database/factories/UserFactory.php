@@ -21,12 +21,11 @@ class UserFactory extends Factory
         return [
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'profile_img' => "null",
-            'phone' => "null",
             'name' => $name,
+            'phone' => "null",
             'email' => $email,
             'email_verified_at' => now(),
-            // 'tutor_auth' => false,
-            // 'tutor_info' => "1",
+            'tutor_auth' => false,
             'remember_token' => Str::random(10),
 
         ];

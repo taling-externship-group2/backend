@@ -17,12 +17,12 @@ class CreateContentsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users');
             $table->string('title')->nullalbe();
-            // $table->text('contents_sum')->nullalbe();
-            // $table->text('target')->nullalbe();
-            // $table->text('contents_detail')->nullalbe();
-            // $table->text('crclm')->nullalbe();
-            // $table->string('cate_main')->nullalbe();
-            // $table->string('cate_sub')->nullalbe();
+            $table->text('contents_sum')->nullalbe();
+            $table->text('target')->nullalbe();
+            $table->text('contents_detail')->nullalbe();
+            $table->text('crclm')->nullalbe();
+            $table->string('cate_main')->nullalbe();
+            $table->string('cate_sub')->nullalbe();
             // $table->string('class_type')->nullalbe();
             // $table->string('t_type')->nullalbe();
             // $table->unsignedInteger('run_time')->nullalbe();

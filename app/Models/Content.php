@@ -18,12 +18,6 @@ class Content extends Model
         'crclm',
         'cate_main',
         'cate_sub',
-        'class_type',
-        't_type',
-        'run_time',
-        'run_count',
-        'region_main',
-        'region_sub',
         'created_at',
         'updated_at'
     ];

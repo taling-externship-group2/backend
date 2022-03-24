@@ -25,10 +25,6 @@ class User extends Authenticatable
         'phone',
         'email',
         'tutor_auth',
-        'tutor_info',
-        'tutor_insta',
-        'tutor_blog',
-        'tutor_youtube',
         'created_at',
         'updated_at'
     ];
