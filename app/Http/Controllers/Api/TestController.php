@@ -11,19 +11,20 @@ class TestController extends Controller
     {
         $response = Content::select('id', 'title');
 
-        return $response;
+        return response()->json($response);
     }
     public function getRecommendContents()
     {
         $response = Content::all();
 
-        return $response;
+        return response()->json($response);
     }
     public function getContentDetail($id)
     {
         $response = Content::find($id);
 
-        return $response;
+        return response()->json($response);
+
     }
 
 

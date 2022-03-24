@@ -15,8 +15,6 @@ use App\Http\Controllers\Api\TestController;
 |
 */
 
-// Route::apiResource('test', TestController::class);
-// Route::apiResource('content', TestController::class);
 
 Route::get('home/recommend', [TestController::class, 'getRecommendContents']);
 Route::get('home/best', [TestController::class, 'getBestContents']);
