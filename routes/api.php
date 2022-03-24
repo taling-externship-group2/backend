@@ -21,4 +21,4 @@ Route::get('home/best', [TestController::class, 'getBestContents']);
 
 Route::get('detail/{id}', [TestController::class, 'getContentDetail']);
 
-Route::get('search', [TestController::class, 'getBestContents']);
+Route::get('search', [TestController::class, 'getSeach']);

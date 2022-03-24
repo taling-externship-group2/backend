@@ -11,18 +11,20 @@ class ContentFactory extends Factory
      *
      * @return array
      */
+
     public function definition()
     {
-        static $no = 1;
-        $title = 'This class_Id is ' . $no++;
+
         $user_id = collect()->range(1, 20)->random();
+        $cateMain = collect(['인기수업', '뷰티/헬스', '액티비티', '라이프', '취미/공예', '머니', '커리어', '디자인/영상', '외국어'])->random();
+        $title = '이 강의는 ' . $cateMain . '의 수업입니다.';
         return [
-            'image' => 'https://img.taling.me/Content/Uploads/Images/bcf7a003e4038a38f2f8d1f30b8baa89a919e95d.png',
+            'image' => 'https://front-img.taling.me/Content/app3/img/logo/app-logo@2x.png',
             'user_id' => $user_id,
             'title' => $title,
             'price' => '110000',
             'discount' => '99000',
-            'cate_sub' => '컴퓨터공학',
+            'cateSub' => '컴퓨터공학',
             'duration' => '20',
             'contents_sum' => '멋쟁이사자처럼에서 교육을 받은 개발자 분들과 2주간 탈잉에서 제시하는 미션을 수행하며 실무 역량을 키우는 프로그램입니다.',
             'target' => '멋쟁이사자처럼 교육을 이수하신 분들 대상의 프로그램입니다. PHP/Laravel, TypeScript/Vue.js 개발자를 대상으로 합니다.',
@@ -37,7 +39,7 @@ class ContentFactory extends Factory
             2주간 진행할 미션에 대한 설명 및 팀 빌딩을 진행합니다.      
             
             각 팀당 30분씩 진행합니다. 진행은 별개 세션으로 진행합니다.',
-            'cate_main' => '커리어'
+            'cateMain' => $cateMain
 
         ];
     }

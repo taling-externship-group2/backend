@@ -21,7 +21,7 @@ class CreateContentsTable extends Migration
             $table->string('title');
             $table->integer('price');
             $table->integer('discount')->nullalbe();
-            $table->string('cate_sub')->nullalbe();
+            $table->string('cateSub')->nullalbe();
             $table->integer('duration')->nullalbe();
 
             // 
@@ -29,7 +29,7 @@ class CreateContentsTable extends Migration
             $table->text('target')->nullalbe();
             $table->text('contents_detail')->nullalbe();
             $table->text('crclm')->nullalbe();
-            $table->string('cate_main')->nullalbe();
+            $table->string('cateMain')->nullalbe();
             // $table->string('class_type')->nullalbe();
             // $table->string('t_type')->nullalbe();
             // $table->unsignedInteger('run_time')->nullalbe();

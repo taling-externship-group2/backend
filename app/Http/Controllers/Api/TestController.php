@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
+use App\Models\User;
 use App\Models\Content;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class TestController extends Controller
 {
     public function getBestContents()
     {
-        $response = Content::select('id', 'image', 'price', 'discount', 'duration', 'cate_sub', 'title')
+        $response = Content::select('id', 'image', 'price', 'discount', 'duration', 'cateSub', 'title')
             ->whereRaw('id > 10')
             ->get();
 
@@ -17,8 +19,9 @@ class TestController extends Controller
     }
     public function getRecommendContents()
     {
-        $response = Content::select('id', 'image', 'price', 'discount', 'duration', 'cate_sub', 'title')
-            ->whereRaw('id <= 10')->get();
+        $response = Content::select('id', 'image', 'price', 'discount', 'duration', 'cateSub', 'title')
+            ->whereRaw('id <= 10')
+            ->get();
 
         return response()->json($response);
     }
@@ -27,6 +30,27 @@ class TestController extends Controller
         $response = Content::find($id);
 
         return response()->json($response);
+    }
+    public function getSeach(Request $request)
+    {
+        $cateMain  = $request->input('cateMain');
+        $cateSub   = $request->input('cateSub');
+        $query = $request->input('query');
+        $day = $request->input('day');
+        $time = $request->input('time');
+        $tType = $request->input('tType');
+        $region = $request->input('region');
+        $regionMain = $request->input('regionMain');
+        $classTypeCode = $request->input('classTypeCode');
+
+        $response = Content::select('id', 'image', 'price', 'discount', 'duration', 'cateSub', 'title');
+        // $response = $response->whereNotNull('cateSub')->where('cateSub', 'like', $cateSub)->get();
+        $response = $response->whereNotNull('cateMain')->where('cateMain', 'like', $cateMain)->get();
+
+        // ->whereNotNull('cateMain')->where('cateMain', 'like', $cateMain)
+        // ->get();
+
+        return response()->json(['category' => $cateMain, 'content_list' => $response]);
     }
 
 
