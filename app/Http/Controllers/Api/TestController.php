@@ -9,13 +9,13 @@ class TestController extends Controller
 {
     public function getBestContents()
     {
-        $response = Content::all();
+        $response = Content::select('id', 'title');
 
         return $response;
     }
     public function getRecommendContents()
     {
-        $response = Content::find();
+        $response = Content::all();
 
         return $response;
     }
@@ -26,7 +26,7 @@ class TestController extends Controller
         return $response;
     }
 
-    
+
 
     public function index()
     {

@@ -18,8 +18,8 @@ use App\Http\Controllers\API\TestController;
 // Route::apiResource('test', TestController::class);
 // Route::apiResource('content', TestController::class);
 
-Route::get('home/recommend', [TestController::class, 'getBestContents']);
-Route::get('home/best', [TestController::class, 'getRecommendContents']);
+Route::get('home/recommend', [TestController::class, 'getRecommendContents']);
+Route::get('home/best', [TestController::class, 'getBestContents']);
 
 Route::get('detail/{id}', [TestController::class, 'getContentDetail']);
 
