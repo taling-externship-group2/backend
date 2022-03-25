@@ -45,7 +45,7 @@ class TestController extends Controller
 
         $tuor = User::select('name')->where('id', '=', 'user_id');
 
-        $response = Content::select('id', 'title', 'love_num', 'review_num', 'price', 'class_type','cateSub');
+        $response = Content::select('id', 'title', 'onedayclass','class_type','love_num', 'review_num', 'price');
         if ($cateMain) $response = $response->where('cateMain', 'like', $cateMain);
 
         $response = $response->get();
