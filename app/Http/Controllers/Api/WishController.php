@@ -16,7 +16,7 @@ class WishController extends Controller
     {
         // $response = $this->get('Api/WishController');
         // $response->assertStatus(200);
-        echo "찜 등록되었습니다.";
+        echo " result: 'OK' ";
     }
 
 
