@@ -16,13 +16,14 @@ use App\Http\Controllers\Api\WishController;
 |
 */
 
+Route::middleware(['cors'])->group(function(){
+    Route::get('home/recommend', [TestController::class, 'getRecommendContents']);
+    Route::get('home/best', [TestController::class, 'getBestContents']);
 
-Route::get('home/recommend', [TestController::class, 'getRecommendContents']);
-Route::get('home/best', [TestController::class, 'getBestContents']);
+    Route::get('detail/{id}', [TestController::class, 'getContentDetail']);
 
-Route::get('detail/{id}', [TestController::class, 'getContentDetail']);
+    Route::get('search', [TestController::class, 'getSeach']);
 
-Route::get('search', [TestController::class, 'getSeach']);
-
-Route::post('wish', [WishController::class, 'makeWish']);
-// Route::get('wish', [WishController::class, 'makeWish']);
+    Route::post('wish', [WishController::class, 'makeWish']);
+    // Route::get('wish', [WishController::class, 'makeWish']);
+});
