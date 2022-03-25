@@ -12,7 +12,7 @@ class TestController extends Controller
     public function getBestContents()
     {
         $response = Content::select('id', 'image', 'badge_list', 'price', 'discount', 'discount_rate', 'duration', 'love_num', 'review_num', 'category', 'tutor_name', 'title')
-            ->whereRaw('id > 10')
+            // ->whereRaw('id > 10')
             ->get();
 
         return response()->json($response);
@@ -20,7 +20,7 @@ class TestController extends Controller
     public function getRecommendContents()
     {
         $response = Content::select('id', 'image', 'badge_list', 'price', 'discount', 'discount_rate', 'duration', 'love_num', 'review_num', 'category', 'tutor_name', 'title')
-            ->whereRaw('id <= 10')
+            // ->whereRaw('id <= 10')
             ->get();
 
         return response()->json($response);
