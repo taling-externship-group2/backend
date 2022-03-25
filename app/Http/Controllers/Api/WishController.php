@@ -15,7 +15,7 @@ class WishController extends Controller
     public function makeWish()
     {
         $response = ["result : ok"];
-        return response()->json("result : ok");
+        return response()->json($response);
     }
 
 
