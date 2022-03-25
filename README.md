@@ -11,7 +11,7 @@
 - DataBase: Mysql
 
 ### DB
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/35039267-f346-4dd5-831c-f13291fe5d5a/Untitled.png)
+![](https://user-images.githubusercontent.com/38105420/160089758-b7345364-1bde-4b25-9167-576bf8425581.png)
 
 ### 셋팅 명령어
 1. composer install
