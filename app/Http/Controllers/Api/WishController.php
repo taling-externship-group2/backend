@@ -14,9 +14,8 @@ class WishController extends Controller
      */
     public function makeWish()
     {
-        // $response = $this->get('Api/WishController');
-        // $response->assertStatus(200);
-        echo " result: 'OK' ";
+        $response = ["result : ok"];
+        return response()->json("result : ok");
     }
 
 
