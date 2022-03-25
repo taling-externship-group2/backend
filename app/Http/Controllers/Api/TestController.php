@@ -43,7 +43,7 @@ class TestController extends Controller
         // $regionMain = $request->input('regionMain');
         // $classTypeCode = $request->input('classTypeCode');
 
-        $tuor = User::select('name')->where('id', '=', 'user_id');
+        // $tuor = User::select('name')->where('id', '=', 'user_id');
 
         $response = Content::select('id', 'talent_title', 'onedayclass', 'class_type', 'love_num', 'review_num', 'user_id', 'original_price', 'total_duration', 'rate');
         if ($cateMain) $response = $response->where('cateMain', 'like', $cateMain);
