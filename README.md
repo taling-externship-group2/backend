@@ -14,12 +14,12 @@
 ![](https://user-images.githubusercontent.com/38105420/160089758-b7345364-1bde-4b25-9167-576bf8425581.png)
 
 ### API
-[GET] https://colossus.wo.tc/api/home/best
-[GET] https://colossus.wo.tc/api/home/recommend
-[GET] https://colossus.wo.tc/api/detail
-[GET] https://colossus.wo.tc/api/search/?
-[POST] https://colossus.wo.tc/api/wish
-[DELETE] https://colossus.wo.tc/api/wish
+[GET] https://colossus.wo.tc/api/home/best <br>
+[GET] https://colossus.wo.tc/api/home/recommend <br>
+[GET] https://colossus.wo.tc/api/detail <br>
+[GET] https://colossus.wo.tc/api/search/? <br>
+[POST] https://colossus.wo.tc/api/wish <br>
+[DELETE] https://colossus.wo.tc/api/wish <br>
 
 
 ### 셋팅 명령어
