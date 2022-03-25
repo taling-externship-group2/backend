@@ -10,14 +10,15 @@ class Content extends Model
     use HasFactory;
     protected $fillable = [
         'id',
+        'image',
         'user_id',
         'title',
         'contents_sum',
         'target',
         'contents_detail',
         'crclm',
-        'cate_main',
-        'cate_sub',
+        'cateMain',
+        'cateSub',
         'created_at',
         'updated_at'
     ];

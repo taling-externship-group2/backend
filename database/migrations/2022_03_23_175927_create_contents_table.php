@@ -24,12 +24,19 @@ class CreateContentsTable extends Migration
             $table->string('cateSub')->nullalbe();
             $table->integer('duration')->nullalbe();
 
-            // 
+            // search 페이지
             $table->text('contents_sum')->nullalbe();
             $table->text('target')->nullalbe();
             $table->text('contents_detail')->nullalbe();
             $table->text('crclm')->nullalbe();
-            $table->string('cateMain')->nullalbe();
+            $table->unsignedInteger('cateMain')->nullalbe();
+            $table->string('category')->nullalbe();
+            $table->string('class_type')->nullalbe();
+            $table->boolean('onedayclass')->default(false)->nullalbe();
+            $table->integer('love_num')->nullalbe();
+            $table->unsignedInteger('rate')->nullalbe();
+            $table->integer('review_num')->nullalbe();
+
             // $table->string('class_type')->nullalbe();
             // $table->string('t_type')->nullalbe();
             // $table->unsignedInteger('run_time')->nullalbe();

@@ -34,22 +34,21 @@ class TestController extends Controller
     public function getSeach(Request $request)
     {
         $cateMain  = $request->input('cateMain');
-        $cateSub   = $request->input('cateSub');
-        $query = $request->input('query');
-        $day = $request->input('day');
-        $time = $request->input('time');
-        $tType = $request->input('tType');
-        $region = $request->input('region');
-        $regionMain = $request->input('regionMain');
-        $classTypeCode = $request->input('classTypeCode');
+        // $cateSub   = $request->input('cateSub');
+        // $query = $request->input('query');
+        // $day = $request->input('day');
+        // $time = $request->input('time');
+        // $tType = $request->input('tType');
+        // $region = $request->input('region');
+        // $regionMain = $request->input('regionMain');
+        // $classTypeCode = $request->input('classTypeCode');
 
-        $response = Content::select('id', 'image', 'price', 'discount', 'duration', 'cateSub', 'title');
-        // $response = $response->whereNotNull('cateSub')->where('cateSub', 'like', $cateSub)->get();
-        $response = $response->whereNotNull('cateMain')->where('cateMain', 'like', $cateMain)->get();
+        $tuor = User::select('name')->where('id', '=', 'user_id');
 
-        // ->whereNotNull('cateMain')->where('cateMain', 'like', $cateMain)
-        // ->get();
+        $response = Content::select('id', 'title', 'love_num', 'review_num', 'price', 'class_type','cateSub');
+        if ($cateMain) $response = $response->where('cateMain', 'like', $cateMain);
 
+        $response = $response->get();
         return response()->json(['category' => $cateMain, 'content_list' => $response]);
     }
 
