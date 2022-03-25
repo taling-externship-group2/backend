@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Wish;
 use Illuminate\Http\Request;
 
 class WishController extends Controller
@@ -14,8 +15,9 @@ class WishController extends Controller
      */
     public function makeWish()
     {
-        $response = ["result : ok"];
-        return response()->json($response);
+        $response = Wish::all();
+        $result = ["result : ok"];
+        return response()->json([$response, $result]);
     }
 
 
