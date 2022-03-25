@@ -36,6 +36,11 @@ class CreateContentsTable extends Migration
             $table->integer('love_num')->nullalbe();
             $table->unsignedInteger('rate')->nullalbe();
             $table->integer('review_num')->nullalbe();
+            $table->string('tutor_name')->nullalbe();
+            $table->string('nickname')->nullalbe();
+            $table->string('tutor_img')->nullalbe();
+
+
 
             // $table->string('class_type')->nullalbe();
             // $table->string('t_type')->nullalbe();

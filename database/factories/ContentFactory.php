@@ -18,31 +18,31 @@ class ContentFactory extends Factory
         $class_type = collect(['오리지널 VOD', '온라인 LIVE', 'VOD,녹화영상', '오프라인', '전자책'])->random();
         switch ($category) {
             case '인기수업':
-                $cateMain = 1;
+                $cateMain = 0;
                 break;
             case '뷰티/헬스':
-                $cateMain = 2;
+                $cateMain = 1;
                 break;
             case '액티비티':
-                $cateMain = 3;
+                $cateMain = 2;
                 break;
             case '라이프':
-                $cateMain = 4;
+                $cateMain = 3;
                 break;
             case '취미/공예':
-                $cateMain = 5;
+                $cateMain = 4;
                 break;
             case '머니':
-                $cateMain = 6;
+                $cateMain = 5;
                 break;
             case '커리어':
-                $cateMain = 7;
+                $cateMain = 6;
                 break;
             case '디자인/영상':
-                $cateMain = 8;
+                $cateMain = 7;
                 break;
             case '외국어':
-                $cateMain = 9;
+                $cateMain = 8;
                 break;
         }
         // switch ($class) {
@@ -90,7 +90,9 @@ class ContentFactory extends Factory
             'love_num' => collect()->range(10, 1000)->random(),
             'rate' => collect()->range(0, 5)->random(),
             'review_num' => collect()->range(10, 1000)->random(),
-
+            'tutor_name' => 'a',
+            'nickname' => 'a',
+            'tutor_img' => 'https://cdn-icons-png.flaticon.com/512/1077/1077114.png'
         ];
     }
 }
