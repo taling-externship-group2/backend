@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\TestController;
+use App\Http\Controllers\Api\WishController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,6 @@ Route::get('home/best', [TestController::class, 'getBestContents']);
 Route::get('detail/{id}', [TestController::class, 'getContentDetail']);
 
 Route::get('search', [TestController::class, 'getSeach']);
+
+Route::post('wish', [WishController::class, 'makeWish']);
+// Route::get('wish', [WishController::class, 'makeWish']);

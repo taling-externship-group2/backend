@@ -12,15 +12,16 @@ class WishController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function postWish()
+    public function makeWish()
     {
-        
+        // $response = $this->get('Api/WishController');
+        // $response->assertStatus(200);
+        echo "찜 등록되었습니다.";
     }
 
 
     public function index()
     {
-        //
     }
 
     /**
@@ -63,7 +64,7 @@ class WishController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy()
     {
         //
     }
